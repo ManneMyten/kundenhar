@@ -17,7 +17,7 @@ body {
         'hd hd hd'
         'a1 l1 img1'
         'e1 l2 e2'
-        'img2 l3 a2'
+        'bt bt bt'
 }
 
 .link {
@@ -58,10 +58,6 @@ nav {
     justify-content: space-between;
 }
 
-/* .bottom {
-    background-color: rgb(0, 0, 32);
-} */
-
 .article1 {
     grid-area: a1;
 }
@@ -82,10 +78,18 @@ nav {
     grid-area: l2;
 }
 
+.bottom {
+    grid-area: bt;
+    display: grid;
+    background-color: rgb(0, 0, 32);
+    grid-template-columns: 35% 27.5% 35%;
+    grid-template-areas: 'img2 l3 a2';
+}
+
 .image2 {
     grid-area: img2;
     background-image: url(../programmer.jpg);
-    background-size: contain;
+    background-size: cover;
     width: 100%;
     height: 100%;
 }
