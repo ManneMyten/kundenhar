@@ -9,6 +9,8 @@ body {
     display: grid;
     height: 100vh;
     width: 100vw;
+    box-sizing: border-box;
+    padding: 0 1vw 1vh 1vw;
     row-gap: 1vh;
     column-gap: 1.25%;
     grid-template-columns: 35% 27.5% 35%;
@@ -18,6 +20,39 @@ body {
         'a1 l1 img1'
         'e1 l2 e2'
         'bt bt bt'
+}
+
+.morecontainer {
+    display: grid;
+    height: 100vh;
+    width: 100vw;
+    box-sizing: border-box;
+    padding: 0 1vw 1vh 1vw;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 10vh 90vh;
+    grid-template-areas: 
+        'hd hd hd'
+        'c_h c_img c_a'
+}
+
+.c_header {
+    grid-area: c_h;
+    font-size: 64px;
+    justify-self: center;
+    align-self: center;
+}
+
+.c_img {
+    grid-area: c_img;
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.c_img img{
+    height: 50%;
+    object-fit: contain;
+    align-self: center;
 }
 
 .link {
@@ -40,15 +75,6 @@ a:visited {
     color: #2ecc71;
 }
 
-article {
-    overflow: hidden;
-}
-
-p {
-    font-size: 16px;
-    margin: 0px;
-}
-
 header {
     grid-area: hd;
     display: flex;
@@ -56,8 +82,22 @@ header {
     justify-content: space-between;
 }
 
+#logo {
+    border: none;
+    color: white;
+}
+
 nav {
     justify-content: space-between;
+}
+
+article {
+    overflow: hidden;
+}
+
+p {
+    font-size: 16px;
+    margin: 0px;
 }
 
 .article1 {
@@ -84,6 +124,8 @@ img {
     grid-area: l2;
 }
 
+
+/* TODO: ändra detta till flex*/
 .bottom {
     grid-area: bt;
     display: grid;
