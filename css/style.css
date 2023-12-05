@@ -17,8 +17,6 @@
     grid-template-columns: 35% 27.5% 35%;
     grid-template-rows: 35vh 17vh 35vh;
     grid-template-areas:
-        /* 'hd hd hd' */
-        /* 'bg bg bg' */
         'a1 l1 img1'
         'e1 l2 e2'
         'bt bt bt'
@@ -31,9 +29,8 @@
     box-sizing: border-box;
     padding: 0 1vw 1vh 1vw;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 10vh 90vh;
+    grid-template-rows: 90vh;
     grid-template-areas: 
-        'hd hd hd'
         'c_h c_img c_a'
 }
 
@@ -54,6 +51,11 @@
 .c_img img{
     height: 50%;
     object-fit: contain;
+    align-self: center;
+}
+
+.c_text {
+    grid-area: c_a;
     align-self: center;
 }
 
@@ -88,14 +90,18 @@ a:visited {
     justify-content: center;
 }
 
-.landing_wpp h1 {
+.landing_wpp * {
     margin-top: 30vh;
     background: transparent;
     font-size: 64px;
 }
 
+.landing_wpp img{
+    width: 80px;
+    height: 80px;
+}
+
 header {
-    /* padding-right: 10vw; <-- detta funka ej och idk varför*/ 
     height: 10vh;
     width: 100%;
     display: flex;
@@ -118,6 +124,7 @@ h1 img {
 }
 
 nav {
+    margin-right: 1vw;
     justify-content: space-between;
 }
 
