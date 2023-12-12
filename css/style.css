@@ -121,7 +121,7 @@
 }
 
 .javawrapper img {
-    width: 30vw;
+    width: 25vw;
     object-fit: contain;
 }
 
@@ -139,7 +139,7 @@ a {
     border-color: #2ecc71;
     text-decoration: none;
     padding: 3px;
-    transition: all 0.4s;
+    transition: background-color 0.4s, color 0.4s, padding 0.2s;
 
     &:visited {
         color: #2ecc71;
@@ -148,7 +148,7 @@ a {
     &:hover {
         background-color: #2ecc71;
         color:black;
-        // padding: 6px;
+        padding: 6px;
     }
 }
 
@@ -194,6 +194,11 @@ h1 img {
 #logo {
     border: none;
     color: white;
+
+    &:hover {
+        border: none;
+        background-color: transparent;
+    }
 }
 
 nav {
