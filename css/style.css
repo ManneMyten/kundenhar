@@ -28,10 +28,11 @@
     box-sizing: border-box;
     padding: 0 3vw 0vh 3vw;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 100vh 100vh;
+    grid-template-rows: 100vh 100vh 100vh;
     grid-template-areas: 
     'c_h c_img c_a'
     'pt pt pt'
+    'jv jv jv'
 }
 
 .c_header {
@@ -96,6 +97,34 @@
     }
 }
 
+.java {
+    grid-area: jv;
+    display: flex;
+    padding: 10vh 0 0 0;
+    align-items: center;
+    align-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.java h3 {
+    font-size: 64px;
+}
+
+.javawrapper {
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+
+.javawrapper article {
+    width: 100%;
+}
+
+.javawrapper img {
+    width: 30vw;
+    object-fit: contain;
+}
+
 .link {
     display: flex;
     align-items: center;
@@ -110,7 +139,7 @@ a {
     border-color: #2ecc71;
     text-decoration: none;
     padding: 3px;
-    transition: background-color 0.4s;
+    transition: all 0.4s;
 
     &:visited {
         color: #2ecc71;
@@ -119,6 +148,7 @@ a {
     &:hover {
         background-color: #2ecc71;
         color:black;
+        // padding: 6px;
     }
 }
 
